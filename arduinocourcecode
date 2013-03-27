@@ -3,21 +3,21 @@
 String inputString = "";
 String nullString = "";
 
-int button1Pin = A0;
-int button2Pin = A1;
-int button3Pin = A2;
-int button4Pin = A3;
-int button5Pin = A4;
-int button6Pin = A5;
+int button1Pin = A5;
+int button2Pin = A4;
+int button3Pin = A3;
+int button4Pin = A2;
+int button5Pin = A1;
+int button6Pin = A0;
 int masterON = 7;
 int masterOFF = 8;
 
 int light1Pin = 3;
-int light2Pin = 5;
-int light3Pin = 6;
-int light4Pin = 9;
-int light5Pin = 10;
-int light6Pin = 11;
+int light2Pin = 11;
+int light3Pin = 5;
+int light4Pin = 10;
+int light5Pin = 6;
+int light6Pin = 9;
 
 int led1Pin = 13;
 
