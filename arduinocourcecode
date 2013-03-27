@@ -82,7 +82,7 @@ void loop(){
   
   
   boolean val1 = digitalRead(button1Pin);
-  delay(5);
+  delay_fnc();
   boolean val12 = digitalRead(button1Pin);
   if (val1 == val12) {
     if (val1 != button1State) {
@@ -94,7 +94,7 @@ void loop(){
   }
   
   boolean val2 = digitalRead(button2Pin);
-  delay(5);
+  delay_fnc();
   boolean val22 = digitalRead(button2Pin);
   if (val2 == val22) {
     if (val2 != button2State) {
@@ -106,7 +106,7 @@ void loop(){
   }
   
   boolean val3 = digitalRead(button3Pin);
-  delay(5);
+  delay_fnc();
   boolean val32 = digitalRead(button3Pin);
   if (val3 == val32) {
     if (val3 != button3State) {
@@ -118,7 +118,7 @@ void loop(){
   }
   
   boolean val4 = digitalRead(button4Pin);
-  delay(5);
+  delay_fnc();
   boolean val42 = digitalRead(button4Pin);
   if (val4 == val42) {
     if (val4 != button4State) {
@@ -130,7 +130,7 @@ void loop(){
   }
   
   boolean val5 = digitalRead(button5Pin);
-  delay(5);
+  delay_fnc();
   boolean val52 = digitalRead(button5Pin);
   if (val5 == val52) {
     if (val5 != button5State) {
@@ -154,7 +154,7 @@ void loop(){
   }
   
   boolean val7 = digitalRead(masterON);
-  delay(5);
+  delay_fnc();
   boolean val72 = digitalRead(masterON);
   if (val7 == val72) {
     if (val7 != masterONState) {
@@ -166,7 +166,7 @@ void loop(){
   }
   
   boolean val8 = digitalRead(masterOFF);
-  delay(5);
+  delay_fnc();
   boolean val82 = digitalRead(masterOFF);
   if (val8 == val82) {
     if (val8 != masterOFFState) {
@@ -253,4 +253,12 @@ void digital_Write()
   digitalWrite(light6Pin, light6Mode);
   Serial.print("light6: "); Serial.println(light6Mode);
   inputString=nullString;
+}
+
+void delay_fnc()
+{
+  for(int i=0;i<5000;i++)
+  {
+    if (Serial.available() > 0) break;
+  }
 }
