@@ -70,16 +70,16 @@ void setup() {
 }
 
 void loop(){
-  if (inputString == "L1") fnc_light1Mode();
-  else if (inputString == "L2") fnc_light2Mode();
-  else if (inputString == "L3") fnc_light3Mode();
-  else if (inputString == "L4") fnc_light4Mode();
-  else if (inputString == "L5") fnc_light5Mode();
-  else if (inputString == "L6") fnc_light6Mode();
-  else if (inputString == "SW") fnc_lightSwitch_Mode();
-  else if (inputString == "ON") fnc_lightON_Mode();
-  else if (inputString == "OFF") fnc_lightOFF_Mode();
-  else if (inputString == "ST") print_fnc();
+  if (inputString == "l1") fnc_light1Mode();
+  else if (inputString == "l2") fnc_light2Mode();
+  else if (inputString == "l3") fnc_light3Mode();
+  else if (inputString == "l4") fnc_light4Mode();
+  else if (inputString == "l5") fnc_light5Mode();
+  else if (inputString == "l6") fnc_light6Mode();
+  else if (inputString == "sw") fnc_lightSwitch_Mode();
+  else if (inputString == "on") fnc_lightON_Mode();
+  else if (inputString == "off") fnc_lightOFF_Mode();
+  else if (inputString == "st") print_fnc();
   else inputString=nullString;
   
   
@@ -258,17 +258,16 @@ void digital_Write()
   digitalWrite(light4Pin, light4Mode);
   digitalWrite(light5Pin, light5Mode);
   digitalWrite(light6Pin, light6Mode);
-  inputString=nullString;
   print_fnc();
 }
 
 void print_fnc(){
-  Serial.print("L1: "); Serial.println(light1Mode);
-  Serial.print("L2: "); Serial.println(light2Mode);
-  Serial.print("L3: "); Serial.println(light3Mode);
-  Serial.print("L4: "); Serial.println(light4Mode);
-  Serial.print("L5: "); Serial.println(light5Mode);
-  Serial.print("L6: "); Serial.println(light6Mode);
+  Serial.print("l1: "); Serial.println(light1Mode);
+  Serial.print("l2: "); Serial.println(light2Mode);
+  Serial.print("l3: "); Serial.println(light3Mode);
+  Serial.print("l4: "); Serial.println(light4Mode);
+  Serial.print("l5: "); Serial.println(light5Mode);
+  Serial.print("l6: "); Serial.println(light6Mode);
   Serial.println();
   inputString=nullString;  
 }
